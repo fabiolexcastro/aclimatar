@@ -12,7 +12,7 @@ suppressMessages(pacman::p_load(tidyverse,terra,gtools,raster,lubridate,envirem)
 #source('https://raw.githubusercontent.com/CIAT-DAPA/agro-clim-indices/main/_main_functions.R')
 
 root <- './common_data'
-  ref <- terra::rast('./common_data/chirps_hist_america/monthly/Prec_1995.tif')[[1]]
+ref <- terra::rast('./common_data/chirps_hist_america/monthly/Prec_1995.tif')[[1]]
 wrl <- rnaturalearth::ne_countries(scale = 50, type = 'countries') 
 zne <- filter(wrl, sov_a3 %in% c('COL', 'ECU', 'BLZ', 'PER', 'MEX', 'NIC', 'SLV', 'GTM', 'HND', 'PAN', 'CRI', 'DOM'))
 zne <- vect(zne)
